@@ -8,13 +8,18 @@ let message= '';
 let isAlive =false;
 let blackJack = false;
 let user = prompt("Enter your name: ");
+
+
 userName.textContent=user;
+
+
 function getRandomCard(){
        let randomNum = Math.floor(Math.random()*13)+1;
        if(randomNum>10) return 10;
        else if (randomNum===1) return 11;
        else return randomNum;
-}
+};
+
 
 function startGame(){
        isAlive=true;
@@ -24,7 +29,8 @@ function startGame(){
        sum = cards[0] + cards[1];
        renderCard();
 
-}
+};
+
 
 function renderCard() {
        cardNum.textContent='';
@@ -44,7 +50,7 @@ function renderCard() {
               isAlive=false;
        }
        messageEl.textContent=message;
-}
+};
 function newCard(){
        if(isAlive && !blackJack){
               let newNum = getRandomCard();
@@ -52,4 +58,4 @@ function newCard(){
               cards.push(newNum);
               renderCard();
        }
-}
+};

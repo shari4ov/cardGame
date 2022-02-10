@@ -23,8 +23,13 @@ button{
        cursor: pointer;
 }
 #userName{
-       border:4px solid khaki;
        display: inline;
        padding:10px;
        color:#016f32;
+}
+.container{
+       border:3px dashed rebeccapurple;
+       display: inline-block;
+       margin-top:50px;
+       padding:50px;
 }
