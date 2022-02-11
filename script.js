@@ -11,10 +11,7 @@ let user = prompt("Enter your name: ");
 
 
 userName.textContent=user;
-function resetGame(){
-       cards=[];
-       sum=0;
-}
+
 
 function getRandomCard(){
        let randomNum = Math.floor(Math.random()*13)+1;
@@ -47,12 +44,14 @@ function renderCard() {
               message = "You've got Blackjack!";
               blackJack =true;
               console.log("WIN");
-              resetGame();    
+              cards=[];
+              sum=0;  
        }
        else {
               message = "You're out of the game!";
               isAlive=false;
-              resetGame();
+              cards=[];
+              sum=0;
        }
        messageEl.textContent=message;
 };
